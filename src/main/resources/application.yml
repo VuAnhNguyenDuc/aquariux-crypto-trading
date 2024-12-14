@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: aquariux-crypto-trading
+  datasource:
+    url: jdbc:h2:mem:testdb;DATABASE_TO_UPPER=false
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 12345
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+
+crypto:
+  userDefaultWallet: 50000
+  supportedCurrencies: ETHUSDT, BTCUSDT
+
+binance:
+    url: https://api.binance.com/api/v3/ticker/bookTicker
+
+huobi:
+    url: https://api.huobi.pro/market/tickers
